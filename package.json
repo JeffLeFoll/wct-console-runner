@@ -1,0 +1,47 @@
+{
+  "name": "wct-tdd-runner",
+  "version": "1.0.0",
+  "description": "Run your web compontent tests in a TDD fashion, using chrome in headless mode.",
+  "keywords": [
+    "browser",
+    "polymer",
+    "test",
+    "testing",
+    "web component",
+    "web",
+    "tdd"
+  ],
+  "homepage": "https://github.com/JeffLeFoll/wct-tdd-runner",
+  "bugs": "https://github.com/JeffLeFoll/wct-tdd-runner/issues",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JeffLeFoll/wct-tdd-runner.git"
+  },
+  "main": "lib/plugin.js",
+  "wct-plugin": {
+    "cli-options": {
+      "port": {
+        "help": "Select an alternative port to run chrome headless (default is 9222)",
+        "full": "port"
+      }
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "chrome-launcher": "^0.3.1",
+    "chrome-remote-interface": "^0.24.0"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "gulp": "^3.8.10",
+    "gulp-jshint": "^2.0.0",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1",
+    "mocha": "^2.2.4"
+  },
+  "engines": {
+    "node": ">= 6.0"
+  }
+}
