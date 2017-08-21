@@ -1039,6 +1039,10 @@ natives@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/natives/-/natives-1.1.0.tgz#e9ff841418a6b2ec7a495e939984f78f163e6e31"
 
+nearest-color@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/nearest-color/-/nearest-color-0.4.0.tgz#dab0b96b80aea91d1e7f6674479b855234effe08"
+
 normalize-path@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-2.1.1.tgz#1ab28b556e198363a8c1a6f7e6fa20137fe6aed9"

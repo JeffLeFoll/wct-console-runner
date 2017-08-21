@@ -19,28 +19,15 @@
     "url": "https://github.com/JeffLeFoll/wct-tdd-runner.git"
   },
   "main": "lib/plugin.js",
-  "wct-plugin": {
-    "cli-options": {
-      "port": {
-        "help": "Select an alternative port to run chrome headless (default is 9222)",
-        "full": "port"
-      }
-    }
-  },
+
   "scripts": {},
   "dependencies": {
     "chalk": "^2.0.1",
     "chrome-launcher": "^0.3.1",
-    "chrome-remote-interface": "^0.24.0"
+    "chrome-remote-interface": "^0.24.0",
+    "nearest-color": "^0.4.0"
   },
-  "devDependencies": {
-    "chai": "^3.3.0",
-    "gulp": "^3.8.10",
-    "gulp-jshint": "^2.0.0",
-    "jshint": "^2.8.0",
-    "jshint-stylish": "^2.0.1",
-    "mocha": "^2.2.4"
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">= 6.0"
   }
