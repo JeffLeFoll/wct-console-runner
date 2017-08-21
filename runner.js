@@ -22,21 +22,9 @@ const CDP = require('chrome-remote-interface');
 const chalk = require('chalk');
 const nearestColor = require('nearest-color').from(solarized);
 
-var indents = 1;
+let indents = 1;
 
-function launchChrome(headless = true) {
-  return chromeLauncher.launch({
-    port: 9222, // Uncomment to force a specific port of your choice.
-    chromeFlags: ['--start-maximized', '--disable-gpu', '--headless'],
-    chromePath: '/usr/bin/chromium-browser'
-  });
-}
-
-function indent() {
-  return Array(indents).join('  ');
-}
-
-async function runner() {
+async function runner(url) {
   const chrome = await launchChrome();
   const protocol = await CDP({ port: chrome.port });
 
@@ -61,34 +49,56 @@ async function runner() {
         let rawText = params.args[0].value;
         let textToWrite = indent() + rawText.replace('%c', '');
 
-        if (params.args[1]) {
-          let colorSpecified = params.args[1].value.match(
-            /#([a-f0-9]{3}){1,2}\b/i
-          );
-
-          if (colorSpecified != null) {
-            let solarizedColor = nearestColor(colorSpecified[0]).value;
-            textToWrite = chalk.hex(solarizedColor)(textToWrite);
-          }
-        }
+        textToWrite = colorizedTextIfColorSpecified(
+          textToWrite,
+          params.args[1]
+        );
 
         console.log(textToWrite);
 
         if (rawText.includes('Evaluated')) {
-          protocol.close();
-          chrome.kill();
+          exitRunner(protocol, chrome);
         }
       }
     });
 
-    await Page.navigate({
-      url: 'http://127.0.0.1:8081/test/slate-idb-store_test.html'
-    });
+    await Page.navigate({ url: url });
   } catch (err) {
     console.error(err);
-    protocol.close();
-    chrome.kill();
+    exitRunner(protocol, chrome);
   }
 }
 
-runner();
+function launchChrome(headless = true) {
+  return chromeLauncher.launch({
+    port: 9222, // Uncomment to force a specific port of your choice.
+    chromeFlags: ['--start-maximized', '--disable-gpu', '--headless'],
+    chromePath: '/usr/bin/chromium-browser'
+  });
+}
+
+function indent() {
+  return Array(indents).join('  ');
+}
+
+function colorizedTextIfColorSpecified(text, rawPossibleColor) {
+  if (rawPossibleColor) {
+    let colorSpecified = rawPossibleColor.value.match(/#([a-f0-9]{3}){1,2}\b/i);
+
+    if (colorSpecified != null) {
+      let solarizedColor = nearestColor(colorSpecified[0]).value;
+
+      return chalk.hex(solarizedColor)(text);
+    } else {
+      return text;
+    }
+  }
+  return text;
+}
+
+function exitRunner(protocol, chrome) {
+  protocol.close();
+  chrome.kill();
+}
+
+runner('http://127.0.0.1:8081/test/slate-idb-store_test.html');
