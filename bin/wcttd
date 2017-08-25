@@ -1,0 +1,10 @@
+#! /usr/bin/env node
+'use strict';
+
+process.title = 'wct-tdd-runner';
+
+require('../lib/cli');
+
+
+
+

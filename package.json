@@ -2,6 +2,9 @@
   "name": "wct-tdd-runner",
   "version": "1.0.0",
   "description": "Run your web compontent tests in a TDD fashion, using chrome in headless mode.",
+  "bin": {
+    "ag": "./bin/wcttdd"
+  },
   "keywords": [
     "browser",
     "polymer",
@@ -19,13 +22,13 @@
     "url": "https://github.com/JeffLeFoll/wct-tdd-runner.git"
   },
   "main": "lib/plugin.js",
-
   "scripts": {},
   "dependencies": {
     "chalk": "^2.0.1",
     "chrome-launcher": "^0.3.1",
     "chrome-remote-interface": "^0.24.0",
-    "nearest-color": "^0.4.0"
+    "nearest-color": "^0.4.0",
+    "yargs": "^8.0.2"
   },
   "devDependencies": {},
   "engines": {
