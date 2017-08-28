@@ -17,10 +17,10 @@ const solarized = {
   green: '#5f8700'
 };
 
-const chromeLauncher = require('chrome-launcher');
-const CDP = require('chrome-remote-interface');
-const chalk = require('chalk');
-const nearestColor = require('nearest-color').from(solarized);
+chromeLauncher = require('chrome-launcher');
+CDP = require('chrome-remote-interface');
+chalk = require('chalk');
+nearestColor = require('nearest-color').from(solarized);
 
 let indents = 1;
 

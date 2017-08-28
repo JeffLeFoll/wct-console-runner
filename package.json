@@ -22,15 +22,25 @@
     "url": "https://github.com/JeffLeFoll/wct-tdd-runner.git"
   },
   "main": "lib/plugin.js",
-  "scripts": {},
+  "scripts": {
+    "test": "mocha ./lib/**/*_spec.js --reporter spec --recursive",
+    "test:cover": "istanbul cover _mocha -- -u exports -R spec ./lib/**/*_spec.js",
+    "test:coverAppveyor": "istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R mocha-appveyor-reporter ./lib/**/*_spec.js",
+    "lint": "eslint .; exit 0"
+  },
   "dependencies": {
     "chalk": "^2.0.1",
     "chrome-launcher": "^0.3.1",
     "chrome-remote-interface": "^0.24.0",
+    "fs-extra": "^4.0.1",
     "nearest-color": "^0.4.0",
+    "prpl-server": "^0.9.0",
     "yargs": "^8.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
+  },
   "engines": {
     "node": ">= 6.0"
   }
