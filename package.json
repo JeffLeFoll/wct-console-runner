@@ -1,7 +1,8 @@
 {
   "name": "wct-tdd-runner",
   "version": "1.0.0",
-  "description": "Run your web compontent tests in a TDD fashion, using chrome in headless mode.",
+  "description":
+    "Run your web compontent tests in a TDD fashion, using chrome in headless mode.",
   "bin": {
     "ag": "./bin/wcttdd"
   },
@@ -23,9 +24,11 @@
   },
   "main": "lib/plugin.js",
   "scripts": {
-    "test": "mocha ./lib/**/*_spec.js --reporter spec --recursive",
-    "test:cover": "istanbul cover _mocha -- -u exports -R spec ./lib/**/*_spec.js",
-    "test:coverAppveyor": "istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R mocha-appveyor-reporter ./lib/**/*_spec.js",
+    "test": "mocha **/*_spec.js --reporter spec --recursive",
+    "test:cover":
+      "istanbul cover _mocha -- -u exports -R spec ./lib/**/*_spec.js",
+    "test:coverAppveyor":
+      "istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R mocha-appveyor-reporter ./lib/**/*_spec.js",
     "lint": "eslint .; exit 0"
   },
   "dependencies": {
