@@ -1,5 +1,6 @@
 {
-  "useEmbededServer": true,
+  "embededServerPort": 9898,
   "deployedTestsUrl": "",
-  "testToRun": "index.html"
+  "testToRun": "index.html",
+  "chromePath": ""
 }
