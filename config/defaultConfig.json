@@ -2,5 +2,6 @@
   "embededServerPort": 9898,
   "deployedTestsUrl": "",
   "testToRun": "index.html",
-  "chromePath": ""
+  "chromePath": "",
+  "watch": true
 }
