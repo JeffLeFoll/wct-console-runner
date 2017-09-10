@@ -1,0 +1,9 @@
+{
+  "configDesc": "Create the config file to override default config",
+  "generateDesc": "Generate an Angular [component|route component|service|filter] in TypeScript",
+  "routeDesc": "Generate a 'route component' named <name>",
+  "componentDesc": "Generate a 'component' named <name>",
+  "ucDesc": "Update or create the angular module for the componant/route-componant/service/filter",
+  "serviceDesc": "Generate a 'service' named <name>",
+  "filterDesc": "Generate a 'filter' named <name>"
+}
