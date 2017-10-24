@@ -1,0 +1,12 @@
+{
+  "configDesc": "Create the config file to override default config.",
+  "runDesc": "Run your tests.",
+  "embededServerPortDesc": "Port of the embeded PRPL server.",
+  "testToRunDesc": "Test to run. Either a specific html file or the index.html one.",
+  "testPathDesc": "Path to the folder where your tests are.",
+  "chromePathDesc": "Path to your Chrome or Chromium installation.",
+  "runningFromInfo": "Running tests from: ",
+  "multipleFilesError": "Not implemented yet. Please use an index.html file in your test folder.",
+  "noTestFileError": "No test file to run",
+  "notExistingTest": "The specified test to run does not exist."
+}

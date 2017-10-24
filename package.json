@@ -5,15 +5,7 @@
   "bin": {
     "ag": "./bin/wcttdd"
   },
-  "keywords": [
-    "browser",
-    "polymer",
-    "test",
-    "testing",
-    "web component",
-    "web",
-    "tdd"
-  ],
+  "keywords": ["browser", "polymer", "test", "testing", "web component", "web", "tdd"],
   "homepage": "https://github.com/JeffLeFoll/wct-tdd-runner",
   "bugs": "https://github.com/JeffLeFoll/wct-tdd-runner/issues",
   "license": "Apache-2.0",
@@ -21,12 +13,10 @@
     "type": "git",
     "url": "https://github.com/JeffLeFoll/wct-tdd-runner.git"
   },
-  "main": "lib/plugin.js",
+  "main": "lib/cli/index.js",
   "scripts": {
     "test": "mocha **/*_spec.js --reporter spec --recursive",
-    "test:cover": "istanbul cover _mocha -- -u exports -R spec ./lib/**/*_spec.js",
-    "test:coverAppveyor": "istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R mocha-appveyor-reporter ./lib/**/*_spec.js",
-    "lint": "eslint .; exit 0"
+    "test:cover": "istanbul cover _mocha -- -u exports -R spec ./lib/**/*_spec.js"
   },
   "dependencies": {
     "chalk": "^2.0.1",
@@ -41,6 +31,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.1",
+    "istanbul": "^0.4.5",
     "mocha": "^3.5.0"
   },
   "engines": {

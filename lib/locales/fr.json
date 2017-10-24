@@ -1,0 +1,12 @@
+{
+  "configDesc": "Génère le fichier de configuration pour remplacer la configuration par défaut",
+  "runDesc": "Exécutez vos tests.",
+  "embededServerPortDesc": "Port du serveur PRPL embarqué.",
+  "testToRunDesc": "Test à exécuter. Soit un fichier .html spécific soit le fichier index.html.",
+  "testPathDesc": "Chemin du répertoir où sont stoqué vos tests unitaires.",
+  "chromePathDesc": "Chemin de votre instalation de Chrome ou Chromium.",
+  "runningFromInfo": "Exécution des tests depuis : ",
+  "multipleFilesError": "Not implemented yet. Please use an index.html file in your test folder.",
+  "noTestFileError": "No test file to run",
+  "notExistingTest": "The specified test to run does not exist."
+}

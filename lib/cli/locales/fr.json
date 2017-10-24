@@ -1,9 +1,0 @@
-{
-  "configDesc": "Génère le fichier de configuration pour remplacer la configuration par défaut",
-  "generateDesc": "Génère un [component|route component|service|filter] Angular en TypeScript",
-  "routeDesc": "Génère un 'route component' nommé <name>",
-  "componentDesc": "Génère un 'component' nommé <name>",
-  "ucDesc": "Met à jour ou crée le module angular pour le composant/composant-route/service/filtre",
-  "serviceDesc": "Génère un 'service' nommé <name>",
-  "filterDesc": "Génère un 'filter' nommé <name>"
-}
