@@ -1,9 +1,9 @@
 {
-  "name": "wct-tdd-runner",
+  "name": "wc-test-runner",
   "version": "1.0.0",
-  "description": "Run your web compontent tests in a TDD fashion, using chrome in headless mode.",
+  "description": "Run your web compontent unit tests in your console like your back-end unit tests.",
   "bin": {
-    "ag": "./bin/wcttdd"
+    "wctr": "./bin/wctr"
   },
   "keywords": ["browser", "polymer", "test", "testing", "web component", "web", "tdd"],
   "homepage": "https://github.com/JeffLeFoll/wct-tdd-runner",

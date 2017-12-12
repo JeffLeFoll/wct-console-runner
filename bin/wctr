@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 'use strict';
 
-process.title = 'wct-tdd-runner';
+process.title = 'wc-test-runner';
 
 require('../lib/cli');
 
